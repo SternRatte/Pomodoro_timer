@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro timer</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="head">
+        <h1>Timer</h1>
+        <button class="settings" data-modal-btn="modal" aria-label="Settings">
+            <img src="../Pomodoro_timer/images/settings.png" alt="icon" width="20" height="20">
+            <span>Setting</span>
+        </button>
+    </div>
+    <div data-modal-window="modal" class="modal">
+        <div class="modal_content">
+            <div class="modal_inner">
+                <div class="modal_title">Setting</div>
+                <div class="close_modal_window">&times;</div>
+            </div>
+            <form class="time-setting">
+                <p>Time(minutes): </p>
+                <div class="row-setting">
+                    <label>Pomodoro:</label>
+                    <input type="number"  class="time_input_modal" value="25">
+                </div>
+                <div class="row-setting">
+                    <label>Short break:</label>
+                    <input type="number"  class="time_input_modal" value="5">
+                </div>
+                <div class="row-setting">
+                    <label>Long break:</label>
+                    <input type="number"  class="time_input_modal" value="15">
+                </div>
+                <div class="row-setting">
+                    <label>Pomodoro count:</label>
+                    <input type="number"  class="time_input_modal" value="4">
+                </div>
+                <button type="button" class="submit_btn_modal control">OK</button>
+            </form>
+        </div>
+    </div>
+    <div class="pomodoro">
+        <div class="navigation">
+        <button class="nav-btn nav-pomodoro nav-active" data-use="pomodoro">Pomodoro</button>
+        <button class="nav-btn nav-shortBreack" data-use="shortBreak">Short Break</button>
+        <button class="nav-btn nav-longBreack" data-use="longBreak">Long Breack</button>
+        </div>
+        <p class="time"><span class="time_minutes">12</span>:<span class="time_seconds">00</span></p>
+        <button class="btn_start control">Start</button>
+        <button class="btn_reset control">Reset</button>
+    </div>
+    <div class="count">
+        <p class="count_text">Pomodoro count: <span class="count_num"></span></p>
+    </div>
+    <p class="title"></p>
+    <div class="tasks">
+        <h2 class="task_title">Tasks</h2>
+        <div class="tasks_list">
+            <div class="todo__item">
+                <div class="todo__item-wrapper">
+                    <input type="checkbox" class="task_checkbox">
+                    <button class="todo__btn"></button>
+                    <button class="todo__edit" aria-label="Edit"></button>
+                    <button class="todo__del" aria-label="Delete"></button>
+                </div>
+            </div>
+            <div class="todo__item">
+                <button class="todo_add control"></button>
+            </div>
+        </div>
+        <div class="add-form">
+            <form>
+                <input class="task-form" placeholder="What are you working on?" type="text">
+                <button class="add-form-btn cancel-btn control" type="button">Cancel</button>
+                <button class="add-form-btn save-btn control" type="button">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../Pomodoro_timer/js/script.js" type="module"></script>
+</body>
+</html>

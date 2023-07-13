@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Montserrat:wght@300;600&family=PT+Serif&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #6495ED;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.pomodoro{
+    margin: 0 auto;
+    background: rgb(173, 216, 230, 0.2);
+    width: 60%;
+    padding: 3% 0;
+    border-radius: 2%;
+    text-align: center;
+}
+
+.container h1{
+    margin: 3% 0;
+}
+
+.head{
+    display: flex;
+}
+
+.settings{
+    margin-left: auto;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings span{
+    margin-left: 10%;
+}
+
+.time{
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.btn-see{
+    display: none;
+}
+
+.nav-btn{
+    cursor: pointer;
+    border: none;
+    background: inherit;
+    font-size: 20px;
+    padding: 3%;
+    border-radius: 20px;
+    color: white;
+}
+
+.nav-active,
+.control{
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.control{
+    color: white;
+    padding: 2% 10%;
+    margin-left: 4%;
+
+    border-radius: 5%;
+    cursor: pointer;
+    -webkit-box-shadow: -9px -8px 22px -5px rgba(34, 60, 80, 0.6) inset;
+    -moz-box-shadow: -9px -8px 22px -5px rgba(34, 60, 80, 0.6) inset;
+    box-shadow: -9px -8px 22px -5px rgba(34, 60, 80, 0.6) inset;
+}
+
+.count,
+.title{
+    font-size: 24px;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.task_title{
+    border-bottom: 2px solid #DCDCDC;
+}
+
+.modal{
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal .modal_content {
+    background-color: #B0C4DE;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    z-index: 9999;
+}
+
+.modal .modal_content .close_modal_window{
+    color: #aaa;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal_title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.row-setting{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.row-setting label{
+    margin-right: 20px;
+}
+
+.error{
+    border-color: red;
+}
+
+.done-task{
+    text-decoration: line-through;
+}
+
+input[type="checkbox"]:checked + .todo__btn {
+    text-decoration: line-through;
+}
+
+input:not([type="checkbox"]) {
+    padding: 5px 15px;
+    border-radius: 100px 100px 100px 100px / 300% 300%;
+}
+
+input[type="number"]{
+    width: 50px;
+    margin: 2% 0;
+    height: 20px;
+}
+
+input[type="text"] {
+    width: 400px;
+    margin: 2% 0;
+    height: 20px;
+}
+
+.time-setting p{
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.todo__item-wrapper{
+    display: flex;
+    margin-top: 1%;
+}
+
+.todo__btn{
+    background: inherit;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 2%;
+}
+
+.todo__edit {
+    flex-shrink: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../Pomodoro_timer/images/edit.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+}
+
+.todo__edit:hover {
+    opacity: 1;
+}
+.todo__del {
+    flex-shrink: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../Pomodoro_timer/images/delete-icon.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.todo__del:hover {
+    opacity: 1;
+}
+
+.todo_add{
+    padding: 1%;
+    margin: 1% 0;
+}
+
+.add-form{
+    display: none;
+}
+
+.add-form-btn{
+    padding: 1%;
+    margin-left: 1%;
+}
+
+.submit_btn_modal{
+    margin: 0 auto;
+}
